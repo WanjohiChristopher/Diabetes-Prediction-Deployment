@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diabetes Prediction</title>
+    <!---------Links ------------------>
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="../templates/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="my-body">
+        <div class="description-photo">
+          <p style="color: black">
+            There are two major forms of diabetes -- type 1 and type 2. This
+            article focuses specifically on the prevention of type 2 diabetes
+            since there is no know way to prevent type 1 diabetes. This form of
+            diabetes is virtually a pandemic in the United States. This
+            information reviews the risk factors for developing type 2 diabetes
+            and reviews key points regarding prediction of those at risk for
+            type 2 diabetes. It also is a review of what they can do about it.
+            While diabetes is characterized by high blood sugar values, type 2
+            diabetes is also associated with a condition known as insulin
+            resistance. Even though there is an element of impaired insulin
+            secretion from the beta cells of the pancreas, especially when toxic
+            levels of glucose occur (when blood sugars are constantly very
+            high), the major defect in type 2 diabetes is the body's inability
+            to respond properly to insulin. Eventually, even though the pancreas
+            is working at its best to produce more and more insulin, the body
+            tissues (for example, muscle and fat cells) do not respond and
+            become insensitive to the insulin. At this point, overt diabetes
+            occurs, as the body is no longer able to effectively use its insulin
+            to maintain normal blood sugar levels. Over time, these high levels
+            of sugar result in the complications we see all too often in
+            patients with diabetes.
+          </p>
+        </div>
+
+        <div class="model-form">
+          <h2>Fill the Your Health Status*</h2>
+          <div class="form">
+            <form action="{{ url_for('predict')}}" method="post">
+              <div class="my-inputs">
+                <label for="">Glucose</label>
+                <input
+                  type="text"
+                  name="Glucose"
+                  id="cream"
+                  class="form-control count"
+                />
+              </div>
+              <div class="my-inputs">
+                <label for=""> Pregnancies</label><br />
+                <input
+                  type="number"
+                  name="	Pregnancies"
+                  id="cream"
+                  class="form-control count"
+                  required
+                />
+              </div>
+              <div class="my-inputs">
+                <label for="">BloodPressure</label><br />
+                <input
+                  type="number"
+                  name="BloodPressure"
+                  id="cream"
+                  class="form-control count"
+                  required
+                />
+              </div>
+              <div class="my-inputs">
+                <label for="">SkinThickness</label><br />
+                <input
+                  type="number"
+                  name="SkinThickness"
+                  id="cream"
+                  class="form-control count"
+                  required
+                />
+              </div>
+              <div class="my-inputs">
+                <label for="">Insulin</label><br />
+                <input
+                  type="number"
+                  name="Insulin"
+                  id="cream"
+                  class="form-control count"
+                  required
+                />
+              </div>
+              <div class="my-inputs">
+                <label for="">DiabetesPedigreeFunction</label><br />
+                <input
+                  type="float"
+                  name="DiabetesPedigreeFunction"
+                  id="cream"
+                  class="form-control count"
+                  required
+                />
+              </div>
+              <div class="my-inputs">
+                <label for="">BMI</label><br />
+                <input
+                  type="float"
+                  name="BMI"
+                  id="cream"
+                  class="form-control count"
+                  required
+                />
+              </div>
+              <div class="my-inputs">
+                <label for="">Age</label><br />
+                <input
+                  type="number"
+                  name="Age"
+                  id="cream"
+                  class="form-control count"
+                  required
+                />
+              </div>
+              <div>
+                <button type="submit" class="btn">Predict</button>
+              </div>
+            </form>
+            <br />
+
+            <span> {{pred}} </span>
+            <br />
+            <hr />
+          </div>
+        </div>
+      </div>
+      <div class="copyright">&copysr; CursorHub Technologies LTD</div>
+    </div>
+
+    <!------------------------Javascript-->
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+  </body>
+</html>
