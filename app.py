@@ -24,9 +24,9 @@ def predict():
     outcome = round(prediction[0], 2)
 
     if outcome == 1:
-        return render_template('deploy.html', pred=' Dear Patient according to the Details you provided :You  have Diabetes.\n{}'.format(outcome))
+        return render_template('deploy.html', pred=' Dear Patient according to the Details you provided :You  have Diabetes.Please seek medical assistance🙏\n{}'.format(outcome))
     else:
-        return render_template('deploy.html', pred='Dear Patient according to the Details you provided : You   Dont have Diabetes.\n{}'.format(outcome))
+        return render_template('deploy.html', pred='Dear Patient according to the Details you provided : You   Dont have Diabetes.Continue keeping safe🤗\n{}'.format(outcome))
 
 
 if __name__ == '__main__':
